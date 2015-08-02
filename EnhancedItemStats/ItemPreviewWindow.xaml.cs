@@ -39,13 +39,11 @@
                 ItemStats.Items.Add("Unidentified");
             }
 
-            var splitValue = itemPrice?.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
-            if (splitValue?.Length > 6) {
-                this.ItemStats.Items.Add(string.Empty);
-                this.ItemStats.Items.Add($"Item Value: {splitValue[2]} - {splitValue[3]}");
-                this.ItemStats.Items.Add($"Item Value: {splitValue[4]}");
-                this.ItemStats.Items.Add($"Item Value: {splitValue[5]} - {splitValue[6]}");
-            }
+            ItemStats.Items.Add("");
+            ItemStats.Items.Add("Chaos Values:");
+            ItemStats.Items.Add($"Mean: {item.ChaosValue.Mean}");
+            ItemStats.Items.Add($"Mean: {item.ChaosValue.Median}");
+            ItemStats.Items.Add($"Range: {item.ChaosValue.Min}-{item.ChaosValue.Max}");
 
             var location = System.Windows.Forms.Cursor.Position;
             this.Left = location.X;

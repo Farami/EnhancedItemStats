@@ -30,6 +30,18 @@
         public double ChaosDps => (this.ChaosDamage.Min + this.ChaosDamage.Max) / 2 * this.AttacksPerSecond;
 
         public double Dps => this.PhysicalDps + this.ElementalDps + this.ChaosDps;
+
+        public ChaosValue ChaosValue { get; set; }
+    }
+
+    public struct ChaosValue {
+        public double Min { get; set; }
+
+        public double Max { get; set; }
+
+        public double Median { get; set; }
+
+        public double Mean { get; set; }
     }
 
     public struct Quality {

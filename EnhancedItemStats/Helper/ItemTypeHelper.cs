@@ -11,7 +11,7 @@
         private static readonly ParsedBaseTypes BaseTypes;
 
         static ItemTypeHelper() {
-            var unparsedItems = File.ReadAllText("BaseItems.json");
+            var unparsedItems = File.ReadAllText(@"Data\BaseItems.json");
 
             BaseTypes = JsonConvert.DeserializeObject<ParsedBaseTypes>(unparsedItems);
         }

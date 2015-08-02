@@ -36,6 +36,10 @@
             }
 
             var item = ItemFactory.ParseItem(text);
+
+            var helper = new PoePriceHelper();
+            item.ChaosValue = helper.GetItemValue(text);
+
             this.previewWindow = new ItemPreviewWindow(item, GetItemPrice(text));
         }
 

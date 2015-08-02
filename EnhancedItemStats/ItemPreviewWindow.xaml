@@ -1,0 +1,22 @@
+﻿<Window x:Class="EnhancedItemStats.ItemPreviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EnhancedItemStats"
+        mc:Ignorable="d"
+        Opacity="0.5"
+        Background="#7d724b"
+        Foreground="#FFFFFF"
+        Title="ItemPreviewWindow"
+        ShowActivated="False" 
+        ResizeMode="NoResize" 
+        ShowInTaskbar="False" 
+        WindowStyle="None" 
+        Topmost="True" 
+        WindowStartupLocation="Manual" 
+        SizeToContent="WidthAndHeight">
+    <Grid>
+        <ItemsControl Name="ItemStats" Padding="3"></ItemsControl>
+    </Grid>
+</Window>
